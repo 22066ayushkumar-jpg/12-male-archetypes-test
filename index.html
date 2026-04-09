@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- SEO Meta Tags -->
+    <title>12 Male Archetypes Test - Discover Your Core Masculine Energy</title>
+    <meta name="description" content="Take this premium, free 12 Male Archetypes Test based on Jungian psychology. Discover your dominant core energy: Are you the King, Warrior, Magician, Lover, or Explorer?">
+    <meta name="keywords" content="12 male archetypes, masculine archetypes test, jungian psychology, king warrior magician lover, personality test for men, self-improvement">
+    <meta name="author" content="Archetype Assessments">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="12 Male Archetypes Test - Discover Your Core Masculine Energy">
+    <meta property="og:description" content="Take this deep psychological assessment to uncover your dominant male archetype and understand your hidden strengths and shadows.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Tailwind Configuration & Styles -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        playfair: ['"Playfair Display"', 'serif'],
+                        inter: ['"Inter"', 'sans-serif'],
+                    },
+                    colors: {
+                        slate: {
+                            950: '#0a0f1a', // Deeper slate for premium feel
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom UI / UX Polish */
+        body {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Subtle Noise Overlay for Texture */
+        .grain-overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            pointer-events: none;
+            z-index: 50;
+            opacity: 0.04;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        /* Premium Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a0f1a; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #334155; }
+
+        /* Smooth Hide utility */
+        .visually-hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 font-inter antialiased min-h-screen flex flex-col relative selection:bg-amber-500 selection:text-slate-900 overflow-x-hidden">
+    
+    <!-- Atmospheric Background Effects -->
+    <div class="grain-overlay"></div>
+    <div class="fixed top-[-20%] left-[-10%] w-[60vw] h-[60vw] bg-amber-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="fixed bottom-[-20%] right-[-10%] w-[60vw] h-[60vw] bg-indigo-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+    <!-- Header -->
+    <header class="w-full p-6 z-10 flex justify-center md:justify-start items-center relative">
+        <div class="font-playfair text-2xl font-bold tracking-widest text-white uppercase">
+            ARCHETYPES<span class="text-amber-500">.</span>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow flex items-center justify-center p-4 z-10 w-full">
+        
+        <!-- ==================== HOME SCREEN ==================== -->
+        <article id="home-screen" class="max-w-4xl w-full mx-auto py-8 flex flex-col items-center text-center transition-all duration-700 transform opacity-100 translate-y-0 scale-100">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs md:text-sm font-semibold mb-8 uppercase tracking-widest shadow-[0_0_15px_rgba(245,158,11,0.1)]">
+                <i class="fa-solid fa-sparkles"></i> Deep Psychology Assessment
+            </div>
+            
+            <h1 class="font-playfair text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                Discover Your Core <br/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-600 italic">Masculine Energy</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-slate-400 max-w-2xl mb-12 leading-relaxed">
+                Based on Carl Jung's psychological frameworks, this 24-question test uncovers your dominant male archetype. Decode your subconscious and learn whether you are driven by the energy of the Ruler, the Hero, the Magician, or the Lover.
+            </p>
+            
+            <button onclick="startQuiz()" class="group relative px-8 py-4 bg-amber-500 text-slate-950 font-bold text-lg rounded-full overflow-hidden shadow-[0_0_30px_rgba(245,158,11,0.25)] hover:shadow-[0_0_50px_rgba(245,158,11,0.4)] hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-amber-500/50">
+                <span class="relative z-10 flex items-center gap-3">
+                    Begin the Assessment <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                </span>
+                <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
+            </button>
+            
+            <div class="mt-20 grid grid-cols-4 md:grid-cols-8 gap-4 opacity-40">
+                <!-- Subtle archetype icons to set the mystical mood -->
+                <div class="flex flex-col items-center gap-2"><i class="fa-solid fa-chess-king text-2xl"></i></div>
+                <div class="flex flex-col items-center gap-2"><i class="fa-solid fa-shield-halved text-2xl"></i></div>
+                <div class="flex flex-col items-center gap-2"><i class="fa-solid fa-wand-magic-sparkles text-2xl"></i></div>
+                <div class="flex flex-col items-center gap-2"><i class="fa-solid fa-fire-flame-curved text-2xl"></i></div>
+                <div class="flex flex-col items-center gap-2 hidden md:flex"><i class="fa-solid fa-compass text-2xl"></i></div>
+                <div class="flex flex-col items-center gap-2 hidden md:flex"><i class="fa-solid fa-book-journal-whills text-2xl"></i></div>
+                <div class="flex flex-col items-center gap-2 hidden md:flex"><i class="fa-solid fa-hammer text-2xl"></i></div>
+                <div class="flex flex-col items-center gap-2 hidden md:flex"><i class="fa-solid fa-bolt text-2xl"></i></div>
+            </div>
+        </article>
+
+        <!-- ==================== QUIZ SCREEN ==================== -->
+        <article id="quiz-screen" class="max-w-2xl w-full mx-auto hidden transition-all duration-700 transform opacity-0 translate-y-8 scale-95">
+            <div class="bg-slate-900/60 backdrop-blur-xl border border-white/10 rounded-3xl p-6 md:p-10 shadow-2xl relative overflow-hidden">
+                
+                <!-- Decorative Top Gradient -->
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-600 via-amber-400 to-amber-600 opacity-50"></div>
+                
+                <!-- Quiz Header -->
+                <div class="flex justify-between items-center mb-8">
+                    <button onclick="prevQuestion()" id="prev-btn" class="text-slate-400 hover:text-white transition-colors flex items-center gap-2 text-sm font-medium focus:outline-none">
+                        <i class="fa-solid fa-arrow-left"></i> <span class="hidden md:inline">Previous</span>
+                    </button>
+                    <div class="text-amber-500 font-bold tracking-widest text-xs md:text-sm">
+                        STATEMENT <span id="current-q-number" class="text-white">1</span> OF 24
+                    </div>
+                    <div class="w-10 md:w-20"></div> <!-- Spacer -->
+                </div>
+                
+                <!-- Progress Bar -->
+                <div class="w-full bg-slate-800 rounded-full h-1.5 mb-10 overflow-hidden">
+                    <div id="progress-bar" class="bg-amber-500 h-full rounded-full transition-all duration-500 ease-out shadow-[0_0_10px_rgba(245,158,11,0.5)]" style="width: 0%"></div>
+                </div>
+                
+                <!-- Question Content -->
+                <div id="question-content" class="transition-all duration-300 transform opacity-100 translate-x-0">
+                    <h2 id="question-text" class="font-playfair text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-10 leading-snug text-center min-h-[120px] flex items-center justify-center">
+                        <!-- Injected via JS -->
+                    </h2>
+                    
+                    <div id="options-container" class="flex flex-col gap-3">
+                        <!-- Buttons Injected via JS -->
+                    </div>
+                </div>
+                
+            </div>
+        </article>
+
+        <!-- ==================== LOADING SCREEN ==================== -->
+        <article id="loading-screen" class="max-w-md w-full mx-auto hidden flex-col items-center justify-center transition-all duration-700 transform opacity-0 translate-y-8 scale-95 min-h-[50vh] text-center">
+            <div class="relative w-28 h-28 mb-8">
+                <!-- Multi-layered mystic spinner -->
+                <div class="absolute inset-0 border-t-2 border-amber-500 rounded-full animate-spin shadow-[0_0_15px_rgba(245,158,11,0.3)]"></div>
+                <div class="absolute inset-3 border-r-2 border-slate-500 rounded-full animate-spin" style="animation-direction: reverse; animation-duration: 1.5s;"></div>
+                <div class="absolute inset-6 border-b-2 border-amber-200 rounded-full animate-spin" style="animation-duration: 2s;"></div>
+                <i class="fa-solid fa-sparkles absolute inset-0 flex items-center justify-center text-3xl text-amber-400 animate-pulse"></i>
+            </div>
+            <h3 id="loading-text" class="font-playfair text-2xl md:text-3xl font-bold text-white transition-opacity duration-300">
+                Analyzing responses...
+            </h3>
+        </article>
+
+        <!-- ==================== RESULTS SCREEN ==================== -->
+        <article id="results-screen" class="max-w-4xl w-full mx-auto py-8 hidden transition-all duration-700 transform opacity-0 translate-y-8 scale-95">
+            
+            <!-- Result Header -->
+            <div class="text-center mb-12 relative">
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-amber-500/20 rounded-full blur-[80px] pointer-events-none z-0"></div>
+                
+                <h2 class="text-amber-500 font-bold tracking-widest uppercase text-xs md:text-sm mb-4 relative z-10">Your Dominant Archetype</h2>
+                
+                <div class="inline-flex items-center justify-center w-28 h-28 rounded-full bg-slate-900/80 backdrop-blur-md border border-amber-500/40 mb-6 shadow-[0_0_40px_rgba(245,158,11,0.25)] relative z-10">
+                    <i id="res-icon" class="fa-solid text-5xl text-amber-400 drop-shadow-[0_0_15px_rgba(245,158,11,0.5)]"></i>
+                </div>
+                
+                <h1 id="res-name" class="font-playfair text-5xl md:text-7xl font-bold text-white mb-2 relative z-10 drop-shadow-lg">Title</h1>
+                <p id="res-title" class="text-xl md:text-2xl text-amber-400/90 italic font-playfair mb-8 relative z-10">Subtitle</p>
+                
+                <blockquote class="max-w-2xl mx-auto text-lg md:text-xl text-slate-300 italic border-l-4 border-amber-500 pl-6 text-left relative z-10 bg-slate-900/40 p-4 rounded-r-xl">
+                    <span id="res-quote">"Quote"</span>
+                </blockquote>
+            </div>
+
+            <!-- Deep Psyche Profile Card -->
+            <div class="bg-slate-900/60 backdrop-blur-xl border border-white/10 rounded-3xl p-6 md:p-10 mb-12 shadow-2xl relative z-10">
+                <h3 class="text-2xl font-playfair font-bold text-white mb-4 flex items-center gap-3">
+                    <i class="fa-solid fa-book-open text-amber-500 text-lg"></i> Psyche Profile
+                </h3>
+                <p id="res-desc" class="text-slate-300 leading-relaxed mb-10 text-lg">Description</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Strengths -->
+                    <div class="bg-slate-800/60 rounded-2xl p-6 border border-emerald-500/20 hover:border-emerald-500/40 transition-colors">
+                        <div class="flex items-center gap-3 text-emerald-400 mb-3 font-bold uppercase tracking-wider text-xs">
+                            <i class="fa-solid fa-arrow-trend-up"></i> Strengths
+                        </div>
+                        <p id="res-strengths" class="text-slate-300 text-sm md:text-base leading-relaxed">...</p>
+                    </div>
+                    
+                    <!-- Weaknesses -->
+                    <div class="bg-slate-800/60 rounded-2xl p-6 border border-rose-500/20 hover:border-rose-500/40 transition-colors">
+                        <div class="flex items-center gap-3 text-rose-400 mb-3 font-bold uppercase tracking-wider text-xs">
+                            <i class="fa-solid fa-moon"></i> The Shadow
+                        </div>
+                        <p id="res-weaknesses" class="text-slate-300 text-sm md:text-base leading-relaxed">...</p>
+                    </div>
+                    
+                    <!-- Core Desire -->
+                    <div class="bg-slate-800/60 rounded-2xl p-6 border border-amber-500/20 hover:border-amber-500/40 transition-colors md:col-span-2">
+                        <div class="flex items-center gap-3 text-amber-400 mb-3 font-bold uppercase tracking-wider text-xs">
+                            <i class="fa-solid fa-bullseye"></i> Core Desire
+                        </div>
+                        <p id="res-desire" class="text-slate-300 text-sm md:text-base leading-relaxed">...</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Secondary Archetypes -->
+            <div class="mb-14 relative z-10">
+                <h3 class="text-xl md:text-2xl font-playfair font-bold text-white mb-6 text-center">Your Secondary Archetypes</h3>
+                <div id="secondary-archetypes" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Injected via JS -->
+                </div>
+            </div>
+            
+            <!-- Actions -->
+            <div class="text-center relative z-10 flex flex-col md:flex-row items-center justify-center gap-4">
+                <button onclick="location.reload()" class="w-full md:w-auto px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-full transition-all border border-slate-700 hover:border-slate-500 focus:outline-none focus:ring-2 focus:ring-slate-500">
+                    <i class="fa-solid fa-rotate-right mr-2"></i> Retake Assessment
+                </button>
+                <button onclick="copyResultsLink(this)" class="w-full md:w-auto px-8 py-4 bg-amber-500 hover:bg-amber-400 text-slate-900 font-bold rounded-full transition-all shadow-[0_0_20px_rgba(245,158,11,0.2)] focus:outline-none focus:ring-2 focus:ring-amber-300">
+                    <i class="fa-solid fa-share-nodes mr-2"></i> Share Test
+                </button>
+            </div>
+            
+        </article>
+    </main>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // --- 1. DATA STRUCTURES ---
+
+        // The 24 Statements mapped to Archetypes
+        const questions = [
+            { text: "I naturally take charge and assume responsibility for the success of my family or team.", archetype: "ruler" },
+            { text: "I maintain faith and optimism, believing that people are inherently good.", archetype: "innocent" },
+            { text: "I am fascinated by the hidden workings of the universe and how to transform reality.", archetype: "magician" },
+            { text: "I believe everyone is equal, and I dislike those who act superior or arrogant.", archetype: "everyman" },
+            { text: "I am driven to prove my worth through courage and facing difficult challenges.", archetype: "hero" },
+            { text: "Deep intimacy, passion, and emotional connection are the most important things to me.", archetype: "lover" },
+            { text: "My primary focus is supporting, nurturing, and protecting those I love.", archetype: "caregiver" },
+            { text: "I rely on logic, intellect, and objective analysis to understand the world.", archetype: "sage" },
+            { text: "I crave freedom and authentic experiences above stability and routine.", archetype: "explorer" },
+            { text: "I have a strong drive to express my unique vision and build things of enduring value.", archetype: "creator" },
+            { text: "I am not afraid to break the rules or disrupt systems that are unjust or ineffective.", archetype: "rebel" },
+            { text: "I believe life is too short to be taken seriously; humor and joy are essential.", archetype: "jester" },
+            { text: "I naturally step up to protect others and fight for what is right.", archetype: "hero" },
+            { text: "Seeking the truth and acquiring profound wisdom is my ultimate goal.", archetype: "sage" },
+            { text: "I often sacrifice my own needs to ensure the well-being of others.", archetype: "caregiver" },
+            { text: "Creating order, structure, and a stable environment is one of my greatest strengths.", archetype: "ruler" },
+            { text: "I prefer to be a regular, dependable guy rather than seeking the spotlight.", archetype: "everyman" },
+            { text: "I am constantly seeking new horizons, both physically and intellectually.", archetype: "explorer" },
+            { text: "I deeply appreciate beauty and strive to build strong, committed relationships.", archetype: "lover" },
+            { text: "I often use humor to lighten the mood, connect with others, or cope with stress.", archetype: "jester" },
+            { text: "I am deeply invested in the creative process, though I can sometimes be a perfectionist.", archetype: "creator" },
+            { text: "I often feel like an outsider and prefer to carve my own unconventional path.", archetype: "rebel" },
+            { text: "I strive to live a pure, simple life and avoid doing things that are morally wrong.", archetype: "innocent" },
+            { text: "I rely on my intuition and vision to act as a catalyst for deep change in my life.", archetype: "magician" }
+        ];
+
+        // Detailed Archetype Profiles
+        const archetypesData = {
+            "ruler": {
+                name: "The Ruler", title: "The Sovereign Leader", icon: "fa-chess-king",
+                description: "You naturally assume responsibility and take control. The Ruler seeks to create a prosperous, structured, and stable environment. You are driven by a desire to lead and protect your domain, whether that's your family, business, or community. You understand that true power comes from providing stability.",
+                coreDesire: "Control, stability, structure, and legacy.",
+                strengths: "Leadership, responsibility, organization, and a commanding, grounded presence.",
+                weaknesses: "Authoritarianism, micromanagement, and a deep-seated fear of chaos or losing power.",
+                quote: "Heavy is the head that wears the crown."
+            },
+            "hero": {
+                name: "The Hero", title: "The Courageous Warrior", icon: "fa-shield-halved",
+                description: "You are defined by your courage, discipline, and determination. The Hero is always ready to face a challenge, overcome obstacles, and protect those who are vulnerable. You prove your worth through mastery and brave action, pushing your limits to achieve greatness.",
+                coreDesire: "To prove worth through courageous, difficult, and decisive action.",
+                strengths: "Bravery, extreme discipline, stamina, and a highly tuned moral compass.",
+                weaknesses: "Arrogance, always needing a battle to fight, and a fear of appearing weak or vulnerable.",
+                quote: "Where there is a will, there is a way."
+            },
+            "magician": {
+                name: "The Magician", title: "The Visionary Transformer", icon: "fa-wand-magic-sparkles",
+                description: "You are drawn to the hidden workings of the universe. The Magician acts as a catalyst for profound transformation, using deep intuition, intellect, and vision to manifest goals into reality. You seek to understand how things work on a fundamental, unseen level.",
+                coreDesire: "Understanding the fundamental laws of the universe and transforming reality.",
+                strengths: "Vision, charisma, deep intuition, and the ability to inspire massive change.",
+                weaknesses: "Manipulation, emotional detachment, and the temptation to use knowledge for selfish gains.",
+                quote: "I observe the invisible to create the impossible."
+            },
+            "lover": {
+                name: "The Lover", title: "The Passionate Partner", icon: "fa-fire-flame-curved",
+                description: "Intimacy, connection, and the passionate experience of life drive you. The Lover appreciates beauty in all its forms—art, nature, and relationships. You lead with an open heart and strive to make others feel deeply seen, desired, and valued.",
+                coreDesire: "Intimacy, deep connection, and experiencing the sensual pleasures of life.",
+                strengths: "Passion, high empathy, appreciation of beauty, and fierce devotion.",
+                weaknesses: "Fear of being alone, losing one's identity to please others, and susceptibility to jealousy.",
+                quote: "You are the only one."
+            },
+            "sage": {
+                name: "The Sage", title: "The Seeker of Truth", icon: "fa-book-journal-whills",
+                description: "You are driven by an insatiable desire to understand the world through intellect and analysis. The Sage values truth above all else and seeks profound wisdom. You remain highly objective, using your knowledge to guide yourself and act as a mentor to others.",
+                coreDesire: "To find the ultimate truth and gain profound, actionable wisdom.",
+                strengths: "High intelligence, objectivity, profound insight, and rigorous analytical thinking.",
+                weaknesses: "Over-analyzing, getting trapped in theory without taking action, and emotional detachment.",
+                quote: "The truth will set you free."
+            },
+            "explorer": {
+                name: "The Explorer", title: "The Restless Wanderer", icon: "fa-compass",
+                description: "You crave absolute freedom, authentic experiences, and the discovery of new horizons. The Explorer is easily bored by routine and avoids feeling trapped at all costs. Your journey is both a physical adventure and a deep inward search for your true identity.",
+                coreDesire: "The freedom to find out who you are through exploring the world.",
+                strengths: "Fierce independence, ambition, boundless curiosity, and unyielding authenticity.",
+                weaknesses: "Aimlessness, inability to commit, and chronic dissatisfaction with the present moment.",
+                quote: "Do not fence me in."
+            },
+            "rebel": {
+                name: "The Rebel", title: "The Radical Disruptor", icon: "fa-bolt",
+                description: "You are not afraid to question the status quo and break the rules. The Rebel disrupts systems that are unjust, outdated, or ineffective. Driven by a desire for radical freedom or revolution, you carve your own entirely unconventional path in life.",
+                coreDesire: "Revolution, disruption, and overturning what isn't working.",
+                strengths: "Courage to challenge the norm, outrageousness, and an aura of radical freedom.",
+                weaknesses: "Destructiveness, cynicism, and rebellion merely for the sake of rebellion.",
+                quote: "Rules are meant to be broken."
+            },
+            "creator": {
+                name: "The Creator", title: "The Master Builder", icon: "fa-hammer",
+                description: "You have a powerful, innate drive to express your unique vision and leave a lasting legacy. The Creator channels raw imagination into tangible forms, building things of enduring value. You are intensely dedicated to your craft and constantly strive for excellence.",
+                coreDesire: "To create things of enduring value and express a highly unique vision.",
+                strengths: "Vast imagination, flawless execution, high creativity, and relentless drive.",
+                weaknesses: "Crippling perfectionism, fear of mediocrity, and creating for ego rather than purpose.",
+                quote: "If it can be imagined, it can be created."
+            },
+            "jester": {
+                name: "The Jester", title: "The Joyful Trickster", icon: "fa-masks-theater",
+                description: "You believe in living fully in the present moment and experiencing absolute joy. The Jester uses humor to navigate the complexities of life, connect deeply with others, and speak hard truths in a playful way. You remind the world not to take itself too seriously.",
+                coreDesire: "To live in the moment with full enjoyment and lighten the world's load.",
+                strengths: "Unbounded joy, brilliant humor, living in the present, and extreme social agility.",
+                weaknesses: "Frivolity, using humor to mask deep pain, and struggling to take serious matters seriously.",
+                quote: "You only live once. Make it fun."
+            },
+            "caregiver": {
+                name: "The Caregiver", title: "The Compassionate Protector", icon: "fa-hand-holding-heart",
+                description: "Your primary focus is on supporting, nurturing, and protecting the people around you. The Caregiver leads with profound empathy and often puts others' needs before their own. You find deep, spiritual fulfillment in acts of service and providing a safe harbor.",
+                coreDesire: "To protect, heal, and care for others unconditionally.",
+                strengths: "Boundless compassion, extreme generosity, empathy, and unwavering reliability.",
+                weaknesses: "Martyrdom, enabling others' bad habits, and dangerously neglecting one's own needs.",
+                quote: "Love your neighbor as yourself."
+            },
+            "everyman": {
+                name: "The Everyman", title: "The Solid Citizen", icon: "fa-users",
+                description: "You are deeply grounded, highly dependable, and profoundly relatable. The Everyman values equality above all and actively dislikes arrogance or elitism. You seek to belong and connect with others on a humble level, making you a fiercely loyal friend.",
+                coreDesire: "Genuine connection, belonging to a community, and equality.",
+                strengths: "Deep empathy, stark realism, complete lack of pretense, and fierce loyalty.",
+                weaknesses: "Losing one's identity to blend in, deep fear of standing out, and occasional cynicism.",
+                quote: "All men and women are created equal."
+            },
+            "innocent": {
+                name: "The Innocent", title: "The Pure Optimist", icon: "fa-dove",
+                description: "You strive to maintain faith, unyielding optimism, and purity of heart. The Innocent believes that life can be simple and good, and you consistently try to do the right thing. Your enduring hope serves as a vital beacon of light for others in dark times.",
+                coreDesire: "To experience paradise, do things right, and be purely happy.",
+                strengths: "Unshakable optimism, deep faith, strong morality, and loyalty.",
+                weaknesses: "Naivete, denial of harsh realities, and avoiding necessary conflict to maintain peace.",
+                quote: "Free to be you and me."
+            }
+        };
+
+        // --- 2. STATE MANAGEMENT ---
+        
+        let currentQ = 0;
+        let userAnswers = new Array(questions.length).fill(null);
+        let isTransitioning = false;
+
+        // --- 3. UI CONTROLLERS ---
+
+        // Screen transition utility with animations
+        async function switchScreen(fromId, toId) {
+            const fromEl = document.getElementById(fromId);
+            const toEl = document.getElementById(toId);
+            
+            if(fromEl) {
+                fromEl.classList.remove('opacity-100', 'translate-y-0', 'scale-100');
+                fromEl.classList.add('opacity-0', '-translate-y-8', 'scale-95');
+                await new Promise(r => setTimeout(r, 600));
+                fromEl.classList.add('visually-hidden', 'hidden');
+            }
+            
+            if(toEl) {
+                toEl.classList.remove('visually-hidden', 'hidden');
+                toEl.classList.remove('-translate-y-8', 'scale-95');
+                toEl.classList.add('translate-y-8', 'scale-105');
+                
+                void toEl.offsetWidth; // Trigger reflow
+                
+                toEl.classList.remove('opacity-0', 'translate-y-8', 'scale-105');
+                toEl.classList.add('opacity-100', 'translate-y-0', 'scale-100');
+            }
+        }
+
+        function startQuiz() {
+            switchScreen('home-screen', 'quiz-screen');
+            renderQuestion();
+        }
+
+        function renderQuestion() {
+            const q = questions[currentQ];
+            
+            // Update Headers
+            document.getElementById('current-q-number').innerText = currentQ + 1;
+            const progressPercent = (currentQ / questions.length) * 100;
+            document.getElementById('progress-bar').style.width = `${progressPercent}%`;
+            
+            // Update Back Button
+            const prevBtn = document.getElementById('prev-btn');
+            prevBtn.style.opacity = currentQ === 0 ? '0' : '1';
+            prevBtn.style.pointerEvents = currentQ === 0 ? 'none' : 'auto';
+
+            // Render Text
+            document.getElementById('question-text').innerText = `"${q.text}"`;
+            
+            // Render Options
+            const optionsContainer = document.getElementById('options-container');
+            optionsContainer.innerHTML = '';
+            
+            const options = [
+                {val: 5, label: "Strongly Agree"},
+                {val: 4, label: "Agree"},
+                {val: 3, label: "Neutral"},
+                {val: 2, label: "Disagree"},
+                {val: 1, label: "Strongly Disagree"}
+            ];
+            
+            options.forEach(opt => {
+                const isSelected = userAnswers[currentQ] === opt.val;
+                
+                const btn = document.createElement('button');
+                btn.className = `w-full py-4 px-6 rounded-xl border font-medium transition-all duration-300 focus:outline-none flex justify-between items-center group text-left ${
+                    isSelected 
+                    ? 'bg-amber-500/20 border-amber-500 text-amber-400 shadow-[0_0_15px_rgba(245,158,11,0.2)]'
+                    : 'bg-slate-800/40 border-slate-700 text-slate-300 hover:bg-slate-700 hover:border-slate-500'
+                }`;
+                
+                btn.innerHTML = `
+                    <span class="text-[15px] md:text-base">${opt.label}</span>
+                    <div class="w-5 h-5 rounded-full border-2 transition-colors flex-shrink-0 ${
+                        isSelected ? 'bg-amber-500 border-amber-500' : 'border-slate-500 group-hover:border-amber-400'
+                    }"></div>
+                `;
+                
+                btn.onclick = () => handleAnswer(opt.val, btn);
+                optionsContainer.appendChild(btn);
+            });
+        }
+
+        async function handleAnswer(value, btnElement) {
+            if(isTransitioning) return;
+            isTransitioning = true;
+            
+            // Visual feedback
+            const allBtns = document.getElementById('options-container').children;
+            for(let b of allBtns) {
+                b.className = "w-full py-4 px-6 rounded-xl border font-medium transition-all duration-300 focus:outline-none flex justify-between items-center group text-left bg-slate-800/40 border-slate-700 text-slate-300 opacity-50";
+                b.querySelector('div').className = "w-5 h-5 rounded-full border-2 transition-colors flex-shrink-0 border-slate-500";
+            }
+            
+            btnElement.classList.remove('bg-slate-800/40', 'border-slate-700', 'text-slate-300', 'opacity-50');
+            btnElement.classList.add('bg-amber-500/20', 'border-amber-500', 'text-amber-400', 'shadow-[0_0_15px_rgba(245,158,11,0.2)]', 'opacity-100');
+            btnElement.querySelector('div').classList.remove('border-slate-500');
+            btnElement.querySelector('div').classList.add('bg-amber-500', 'border-amber-500');
+            
+            userAnswers[currentQ] = value;
+            
+            await new Promise(r => setTimeout(r, 400)); 
+            
+            if (currentQ < questions.length - 1) {
+                // Animate content change
+                const qContent = document.getElementById('question-content');
+                qContent.classList.remove('opacity-100', 'translate-x-0');
+                qContent.classList.add('opacity-0', '-translate-x-8');
+                
+                await new Promise(r => setTimeout(r, 300));
+                
+                currentQ++;
+                renderQuestion();
+                
+                qContent.classList.remove('-translate-x-8');
+                qContent.classList.add('translate-x-8');
+                void qContent.offsetWidth; // Reflow
+                
+                qContent.classList.remove('opacity-0', 'translate-x-8');
+                qContent.classList.add('opacity-100', 'translate-x-0');
+                
+                setTimeout(() => isTransitioning = false, 300);
+            } else {
+                finishQuiz();
+            }
+        }
+
+        async function prevQuestion() {
+            if(currentQ > 0 && !isTransitioning) {
+                isTransitioning = true;
+                
+                const qContent = document.getElementById('question-content');
+                qContent.classList.remove('opacity-100', 'translate-x-0');
+                qContent.classList.add('opacity-0', 'translate-x-8');
+                
+                await new Promise(r => setTimeout(r, 300));
+                
+                currentQ--;
+                renderQuestion();
+                
+                qContent.classList.remove('translate-x-8');
+                qContent.classList.add('-translate-x-8');
+                void qContent.offsetWidth; 
+                
+                qContent.classList.remove('opacity-0', '-translate-x-8');
+                qContent.classList.add('opacity-100', 'translate-x-0');
+                
+                setTimeout(() => isTransitioning = false, 300);
+            }
+        }
+
+        async function finishQuiz() {
+            // Fill progress bar to 100%
+            document.getElementById('progress-bar').style.width = '100%';
+            await new Promise(r => setTimeout(r, 400));
+            
+            await switchScreen('quiz-screen', 'loading-screen');
+            
+            // Artificial loading sequence for dramatic effect
+            const loadingTexts = ["Compiling metrics...", "Mapping your subconscious...", "Unveiling your archetype..."];
+            const loadingEl = document.getElementById('loading-text');
+            
+            for(let text of loadingTexts) {
+                loadingEl.style.opacity = 0;
+                await new Promise(r => setTimeout(r, 300));
+                loadingEl.innerText = text;
+                loadingEl.style.opacity = 1;
+                await new Promise(r => setTimeout(r, 900));
+            }
+            
+            calculateAndRenderResults();
+            await switchScreen('loading-screen', 'results-screen');
+            window.scrollTo(0, 0);
+        }
+
+        function calculateAndRenderResults() {
+            let scores = {};
+            Object.keys(archetypesData).forEach(k => scores[k] = 0);
+            
+            questions.forEach((q, i) => {
+                scores[q.archetype] += userAnswers[i] || 0; // fallback to 0 if skipped somehow
+            });
+            
+            let sorted = Object.keys(scores).map(key => ({
+                id: key,
+                score: scores[key],
+                data: archetypesData[key]
+            })).sort((a, b) => b.score - a.score);
+            
+            const primary = sorted[0];
+            
+            // Inject Primary Result
+            document.getElementById('res-icon').className = `fa-solid ${primary.data.icon} text-5xl text-amber-400 drop-shadow-[0_0_15px_rgba(245,158,11,0.5)]`;
+            document.getElementById('res-name').innerText = primary.data.name;
+            document.getElementById('res-title').innerText = primary.data.title;
+            document.getElementById('res-desc').innerText = primary.data.description;
+            document.getElementById('res-quote').innerText = `"${primary.data.quote}"`;
+            
+            document.getElementById('res-desire').innerText = primary.data.coreDesire;
+            document.getElementById('res-strengths').innerText = primary.data.strengths;
+            document.getElementById('res-weaknesses').innerText = primary.data.weaknesses;
+            
+            // Render Secondary Archetypes (Top 2-3)
+            const secContainer = document.getElementById('secondary-archetypes');
+            secContainer.innerHTML = '';
+            
+            // Max possible score for one archetype is 10 (2 questions x 5 max points)
+            for(let i=1; i<=3; i++) {
+                const arch = sorted[i];
+                const percentage = Math.round((arch.score / 10) * 100); 
+                
+                secContainer.innerHTML += `
+                    <div class="bg-slate-800/40 border border-slate-700 p-5 rounded-2xl flex items-center gap-4 hover:bg-slate-800/60 transition-colors">
+                        <div class="w-14 h-14 rounded-full bg-slate-900 flex items-center justify-center text-amber-500/80 border border-slate-700 shrink-0 shadow-inner">
+                            <i class="fa-solid ${arch.data.icon} text-xl"></i>
+                        </div>
+                        <div class="flex-grow">
+                            <h4 class="font-playfair text-lg font-bold text-slate-200 mb-1">${arch.data.name}</h4>
+                            <div class="w-full bg-slate-900 rounded-full h-1.5 overflow-hidden">
+                                <div class="bg-gradient-to-r from-amber-600 to-amber-400 h-full rounded-full" style="width: ${percentage}%"></div>
+                            </div>
+                        </div>
+                        <div class="text-amber-500/80 font-bold text-sm w-12 text-right">${percentage}%</div>
+                    </div>
+                `;
+            }
+        }
+
+        function copyResultsLink(btn) {
+            // Mock share functionality
+            const originalText = btn.innerHTML;
+            btn.innerHTML = `<i class="fa-solid fa-check mr-2"></i> Link Copied!`;
+            btn.classList.replace('bg-amber-500', 'bg-emerald-500');
+            btn.classList.replace('hover:bg-amber-400', 'hover:bg-emerald-400');
+            
+            // Dummy copy to clipboard 
+            const dummy = document.createElement('input');
+            document.body.appendChild(dummy);
+            dummy.value = window.location.href;
+            dummy.select();
+            document.execCommand('copy');
+            document.body.removeChild(dummy);
+
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.classList.replace('bg-emerald-500', 'bg-amber-500');
+                btn.classList.replace('hover:bg-emerald-400', 'hover:bg-amber-400');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
