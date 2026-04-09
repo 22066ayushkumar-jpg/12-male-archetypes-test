@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="google-site-verification" content="sX6f1mtVU_74P7roo-T4brgZi1qfcFSurPO4yXhF1Io" />
+    
     <!-- SEO Meta Tags -->
     <title>12 Male Archetypes Test - Discover Your Core Masculine Energy</title>
     <meta name="description" content="Take this premium, free 12 Male Archetypes Test based on Jungian psychology. Discover your dominant core energy: Are you the King, Warrior, Magician, Lover, or Explorer?">
@@ -17,6 +17,11 @@
     <meta property="og:description" content="Take this deep psychological assessment to uncover your dominant male archetype and understand your hidden strengths and shadows.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#0a0f1a">
+
+    <!-- Preconnects to speed up external resource delivery -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -26,8 +31,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- FontAwesome Icons (Loaded asynchronously to eliminate render-blocking) -->
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
 
     <!-- Custom Tailwind Configuration & Styles -->
     <script>
@@ -108,7 +117,7 @@
                 Based on Carl Jung's psychological frameworks, this 24-question test uncovers your dominant male archetype. Decode your subconscious and learn whether you are driven by the energy of the Ruler, the Hero, the Magician, or the Lover.
             </p>
             
-            <button onclick="startQuiz()" class="group relative px-8 py-4 bg-amber-500 text-slate-950 font-bold text-lg rounded-full overflow-hidden shadow-[0_0_30px_rgba(245,158,11,0.25)] hover:shadow-[0_0_50px_rgba(245,158,11,0.4)] hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-amber-500/50">
+            <button onclick="startQuiz()" aria-label="Begin the Assessment" class="group relative px-8 py-4 bg-amber-500 text-slate-950 font-bold text-lg rounded-full overflow-hidden shadow-[0_0_30px_rgba(245,158,11,0.25)] hover:shadow-[0_0_50px_rgba(245,158,11,0.4)] hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-amber-500/50">
                 <span class="relative z-10 flex items-center gap-3">
                     Begin the Assessment <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
                 </span>
@@ -137,7 +146,7 @@
                 
                 <!-- Quiz Header -->
                 <div class="flex justify-between items-center mb-8">
-                    <button onclick="prevQuestion()" id="prev-btn" class="text-slate-400 hover:text-white transition-colors flex items-center gap-2 text-sm font-medium focus:outline-none">
+                    <button onclick="prevQuestion()" id="prev-btn" aria-label="Previous Question" class="text-slate-400 hover:text-white transition-colors flex items-center gap-2 text-sm font-medium focus:outline-none">
                         <i class="fa-solid fa-arrow-left"></i> <span class="hidden md:inline">Previous</span>
                     </button>
                     <div class="text-amber-500 font-bold tracking-widest text-xs md:text-sm">
@@ -244,10 +253,10 @@
             
             <!-- Actions -->
             <div class="text-center relative z-10 flex flex-col md:flex-row items-center justify-center gap-4">
-                <button onclick="location.reload()" class="w-full md:w-auto px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-full transition-all border border-slate-700 hover:border-slate-500 focus:outline-none focus:ring-2 focus:ring-slate-500">
+                <button onclick="location.reload()" aria-label="Retake Assessment" class="w-full md:w-auto px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-full transition-all border border-slate-700 hover:border-slate-500 focus:outline-none focus:ring-2 focus:ring-slate-500">
                     <i class="fa-solid fa-rotate-right mr-2"></i> Retake Assessment
                 </button>
-                <button onclick="copyResultsLink(this)" class="w-full md:w-auto px-8 py-4 bg-amber-500 hover:bg-amber-400 text-slate-900 font-bold rounded-full transition-all shadow-[0_0_20px_rgba(245,158,11,0.2)] focus:outline-none focus:ring-2 focus:ring-amber-300">
+                <button onclick="copyResultsLink(this)" aria-label="Share Test Results" class="w-full md:w-auto px-8 py-4 bg-amber-500 hover:bg-amber-400 text-slate-900 font-bold rounded-full transition-all shadow-[0_0_20px_rgba(245,158,11,0.2)] focus:outline-none focus:ring-2 focus:ring-amber-300">
                     <i class="fa-solid fa-share-nodes mr-2"></i> Share Test
                 </button>
             </div>
@@ -315,7 +324,7 @@
             },
             "lover": {
                 name: "The Lover", title: "The Passionate Partner", icon: "fa-fire-flame-curved",
-                description: "Intimacy, connection, and the passionate experience of life drive you. The Lover appreciates beauty in all its formsart, nature, and relationships. You lead with an open heart and strive to make others feel deeply seen, desired, and valued.",
+                description: "Intimacy, connection, and the passionate experience of life drive you. The Lover appreciates beauty in all its forms—art, nature, and relationships. You lead with an open heart and strive to make others feel deeply seen, desired, and valued.",
                 coreDesire: "Intimacy, deep connection, and experiencing the sensual pleasures of life.",
                 strengths: "Passion, high empathy, appreciation of beauty, and fierce devotion.",
                 weaknesses: "Fear of being alone, losing one's identity to please others, and susceptibility to jealousy.",
