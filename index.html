@@ -2,7 +2,8 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Optimized for mobile devices and notches (viewport-fit=cover), removed user-scalable=no for accessibility -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     
     <!-- SEO Meta Tags -->
     <title>12 Male Archetypes Test - Discover Your Core Masculine Energy</title>
@@ -10,35 +11,31 @@
     <meta name="keywords" content="archetype tests, archetypes test, archetype test, jungian archetype test, jungian archetypes test, jung archetypes test, archetype test free, what are my archetypes, free archetype test, what is my archetype, archetype quiz free, what archetype am i, jung archetype quiz, jungian archetypes quiz, what's my archetype, 12 male archetypes">
     <meta name="author" content="Archetype Assessments">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://22066ayushkumar-jpg.github.io/12-male-archetypes-test/" />
     
     <!-- Open Graph / Social -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://22066ayushkumar-jpg.github.io/12-male-archetypes-test/">
     <meta property="og:title" content="12 Male Archetypes Test - Discover Your Core Masculine Energy">
     <meta property="og:description" content="Take this deep psychological assessment to uncover your dominant male archetype and understand your hidden strengths and shadows.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
     <meta name="twitter:card" content="summary_large_image">
+    <!-- Deepened theme color to match the UI -->
     <meta name="theme-color" content="#0a0f1a">
 
     <!-- Preconnects to speed up external resource delivery -->
     <link rel="preconnect" href="https://cdn.tailwindcss.com">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
-    <!-- FontAwesome Icons (Loaded asynchronously to eliminate render-blocking) -->
+    <!-- FontAwesome Icons -->
     <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-    <noscript>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    </noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Custom Tailwind Configuration & Styles -->
     <script>
@@ -62,6 +59,7 @@
     <style>
         /* Custom UI / UX Polish */
         body {
+            /* Prevents ugly blue tap highlights on mobile */
             -webkit-tap-highlight-color: transparent;
         }
 
@@ -75,15 +73,22 @@
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
         }
 
-        /* Premium Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #0a0f1a; }
-        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #334155; }
+        /* Premium Scrollbar - Hidden on touch devices for a cleaner mobile look */
+        @media (pointer: fine) {
+            ::-webkit-scrollbar { width: 8px; }
+            ::-webkit-scrollbar-track { background: #0a0f1a; }
+            ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+            ::-webkit-scrollbar-thumb:hover { background: #334155; }
+        }
 
         /* Smooth Hide utility */
         .visually-hidden {
             display: none !important;
+        }
+
+        /* Safe area padding for iPhones with home bars */
+        .pb-safe {
+            padding-bottom: env(safe-area-inset-bottom, 20px);
         }
     </style>
 </head>
@@ -95,27 +100,36 @@
     <div class="fixed bottom-[-20%] right-[-10%] w-[60vw] h-[60vw] bg-indigo-600/10 rounded-full blur-[120px] pointer-events-none"></div>
 
     <!-- Header -->
-    <header class="w-full p-6 z-10 flex justify-center md:justify-start items-center relative">
-        <div class="font-playfair text-2xl font-bold tracking-widest text-white uppercase">
+    <header class="w-full p-4 sm:p-6 z-10 flex justify-center md:justify-start items-center relative">
+        <div class="font-playfair text-xl sm:text-2xl font-bold tracking-widest text-white uppercase">
             ARCHETYPES<span class="text-amber-500">.</span>
         </div>
     </header>
 
-    <!-- Main Content Area -->
-    <main class="flex-grow flex items-center justify-center p-4 z-10 w-full">
+    <!-- Main Content Area with safe area padding -->
+    <main class="flex-grow flex items-center justify-center p-4 pb-safe z-10 w-full">
         
         <!-- ==================== HOME SCREEN ==================== -->
-        <article id="home-screen" class="max-w-4xl w-full mx-auto py-8 flex flex-col items-center text-center transition-all duration-700 transform opacity-100 translate-y-0 scale-100">
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs md:text-sm font-semibold mb-8 uppercase tracking-widest shadow-[0_0_15px_rgba(245,158,11,0.1)]">
-                <i class="fa-solid fa-sparkles"></i> Free Jungian Psychology Assessment
+        <article id="home-screen" class="max-w-4xl w-full mx-auto py-4 sm:py-8 flex flex-col items-center text-center transition-all duration-150 transform opacity-100 translate-y-0 scale-100">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-[10px] sm:text-xs md:text-sm font-semibold mb-6 sm:mb-8 uppercase tracking-widest shadow-[0_0_15px_rgba(245,158,11,0.1)]">
+                <i class="fa-solid fa-sparkles"></i> Free Jungian Assessment
             </div>
             
-            <h1 class="font-playfair text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            <!-- Scaled down typography for narrow screens to prevent text wrap issues -->
+            <h1 class="font-playfair text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
                 12 Male<br/>
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-600 italic">Archetypes Test</span>
             </h1>
             
-            <div class="text-base md:text-lg text-slate-400 max-w-3xl mb-12 leading-relaxed space-y-6">
+            <!-- Added active:scale-95 for native-feeling mobile tap response -->
+            <button onclick="startQuiz()" aria-label="Begin the Assessment" class="group relative w-full sm:w-auto px-8 py-4 bg-amber-500 text-slate-950 font-bold text-lg rounded-full overflow-hidden shadow-[0_0_30px_rgba(245,158,11,0.25)] hover:shadow-[0_0_50px_rgba(245,158,11,0.4)] active:scale-95 transition-all duration-150 focus:outline-none focus:ring-4 focus:ring-amber-500/50 mb-10">
+                <span class="relative z-10 flex items-center justify-center gap-3">
+                    Start Your Archetype Test <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform duration-150"></i>
+                </span>
+                <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-150 ease-out"></div>
+            </button>
+            
+            <div class="text-sm sm:text-base md:text-lg text-slate-400 max-w-3xl mb-10 sm:mb-12 leading-relaxed space-y-4 sm:space-y-6 px-2">
                 <p>
                     Have you ever asked yourself, "<strong>what is my archetype?</strong>" or "<strong>what archetype am I?</strong>" Welcome to the ultimate 12 male <strong>archetypes test</strong>. Based on Carl Jung's psychological frameworks, this <strong>archetype test free</strong> of charge helps you decode your subconscious and discover your dominant core energy.
                 </p>
@@ -127,56 +141,47 @@
                 </p>
             </div>
             
-            <button onclick="startQuiz()" aria-label="Begin the Assessment" class="group relative px-8 py-4 bg-amber-500 text-slate-950 font-bold text-lg rounded-full overflow-hidden shadow-[0_0_30px_rgba(245,158,11,0.25)] hover:shadow-[0_0_50px_rgba(245,158,11,0.4)] hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-amber-500/50">
-                <span class="relative z-10 flex items-center gap-3">
-                    Start Your Archetype Test <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-                </span>
-                <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
-            </button>
-            
-            <div class="mt-20 grid grid-cols-4 md:grid-cols-8 gap-4 opacity-40">
-                <!-- Subtle archetype icons to set the mystical mood -->
-                <div class="flex flex-col items-center gap-2"><i class="fa-solid fa-chess-king text-2xl"></i></div>
-                <div class="flex flex-col items-center gap-2"><i class="fa-solid fa-shield-halved text-2xl"></i></div>
-                <div class="flex flex-col items-center gap-2"><i class="fa-solid fa-wand-magic-sparkles text-2xl"></i></div>
-                <div class="flex flex-col items-center gap-2"><i class="fa-solid fa-fire-flame-curved text-2xl"></i></div>
-                <div class="flex flex-col items-center gap-2 hidden md:flex"><i class="fa-solid fa-compass text-2xl"></i></div>
-                <div class="flex flex-col items-center gap-2 hidden md:flex"><i class="fa-solid fa-book-journal-whills text-2xl"></i></div>
-                <div class="flex flex-col items-center gap-2 hidden md:flex"><i class="fa-solid fa-hammer text-2xl"></i></div>
-                <div class="flex flex-col items-center gap-2 hidden md:flex"><i class="fa-solid fa-bolt text-2xl"></i></div>
+            <div class="mt-4 sm:mt-8 grid grid-cols-4 md:grid-cols-8 gap-4 opacity-40">
+                <div class="flex flex-col items-center gap-2"><i class="fa-solid fa-chess-king text-xl sm:text-2xl"></i></div>
+                <div class="flex flex-col items-center gap-2"><i class="fa-solid fa-shield-halved text-xl sm:text-2xl"></i></div>
+                <div class="flex flex-col items-center gap-2"><i class="fa-solid fa-wand-magic-sparkles text-xl sm:text-2xl"></i></div>
+                <div class="flex flex-col items-center gap-2"><i class="fa-solid fa-fire-flame-curved text-xl sm:text-2xl"></i></div>
+                <div class="flex flex-col items-center gap-2 hidden md:flex"><i class="fa-solid fa-compass text-xl sm:text-2xl"></i></div>
+                <div class="flex flex-col items-center gap-2 hidden md:flex"><i class="fa-solid fa-book-journal-whills text-xl sm:text-2xl"></i></div>
+                <div class="flex flex-col items-center gap-2 hidden md:flex"><i class="fa-solid fa-hammer text-xl sm:text-2xl"></i></div>
+                <div class="flex flex-col items-center gap-2 hidden md:flex"><i class="fa-solid fa-bolt text-xl sm:text-2xl"></i></div>
             </div>
         </article>
 
         <!-- ==================== QUIZ SCREEN ==================== -->
-        <article id="quiz-screen" class="max-w-2xl w-full mx-auto hidden transition-all duration-700 transform opacity-0 translate-y-8 scale-95">
-            <div class="bg-slate-900/60 backdrop-blur-xl border border-white/10 rounded-3xl p-6 md:p-10 shadow-2xl relative overflow-hidden">
+        <article id="quiz-screen" class="max-w-2xl w-full mx-auto hidden transition-all duration-150 transform opacity-0 translate-y-4 scale-95">
+            <!-- Adjusted padding for mobile -->
+            <div class="bg-slate-900/60 backdrop-blur-xl border border-white/10 rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-10 shadow-2xl relative overflow-hidden">
                 
-                <!-- Decorative Top Gradient -->
                 <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-600 via-amber-400 to-amber-600 opacity-50"></div>
                 
-                <!-- Quiz Header -->
-                <div class="flex justify-between items-center mb-8">
-                    <button onclick="prevQuestion()" id="prev-btn" aria-label="Previous Question" class="text-slate-400 hover:text-white transition-colors flex items-center gap-2 text-sm font-medium focus:outline-none">
-                        <i class="fa-solid fa-arrow-left"></i> <span class="hidden md:inline">Previous</span>
+                <div class="flex justify-between items-center mb-6 sm:mb-8">
+                    <!-- Added active:opacity-50 for touch feedback -->
+                    <button onclick="prevQuestion()" id="prev-btn" aria-label="Previous Question" class="text-slate-400 hover:text-white active:scale-95 transition-all flex items-center gap-2 text-xs sm:text-sm font-medium focus:outline-none px-2 py-1 -ml-2 rounded-lg">
+                        <i class="fa-solid fa-arrow-left"></i> <span class="hidden sm:inline">Previous</span>
                     </button>
-                    <div class="text-amber-500 font-bold tracking-widest text-xs md:text-sm">
+                    <div class="text-amber-500 font-bold tracking-widest text-[10px] sm:text-xs md:text-sm">
                         STATEMENT <span id="current-q-number" class="text-white">1</span> OF 24
                     </div>
-                    <div class="w-10 md:w-20"></div> <!-- Spacer -->
+                    <div class="w-8 sm:w-10 md:w-20"></div> <!-- Spacer -->
                 </div>
                 
-                <!-- Progress Bar -->
-                <div class="w-full bg-slate-800 rounded-full h-1.5 mb-10 overflow-hidden">
-                    <div id="progress-bar" class="bg-amber-500 h-full rounded-full transition-all duration-500 ease-out shadow-[0_0_10px_rgba(245,158,11,0.5)]" style="width: 0%"></div>
+                <div class="w-full bg-slate-800 rounded-full h-1 sm:h-1.5 mb-8 sm:mb-10 overflow-hidden">
+                    <div id="progress-bar" class="bg-amber-500 h-full rounded-full transition-all duration-200 ease-out shadow-[0_0_10px_rgba(245,158,11,0.5)]" style="width: 0%"></div>
                 </div>
                 
-                <!-- Question Content -->
-                <div id="question-content" class="transition-all duration-300 transform opacity-100 translate-x-0">
-                    <h2 id="question-text" class="font-playfair text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-10 leading-snug text-center min-h-[120px] flex items-center justify-center">
+                <div id="question-content" class="transition-all duration-150 transform opacity-100 translate-x-0">
+                    <!-- Scaled typography down slightly on mobile to fit nicely -->
+                    <h2 id="question-text" class="font-playfair text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-8 sm:mb-10 leading-snug text-center min-h-[90px] sm:min-h-[120px] flex items-center justify-center">
                         <!-- Injected via JS -->
                     </h2>
                     
-                    <div id="options-container" class="flex flex-col gap-3">
+                    <div id="options-container" class="flex flex-col gap-2.5 sm:gap-3">
                         <!-- Buttons Injected via JS -->
                     </div>
                 </div>
@@ -184,89 +189,71 @@
             </div>
         </article>
 
-        <!-- ==================== LOADING SCREEN ==================== -->
-        <article id="loading-screen" class="max-w-md w-full mx-auto hidden flex-col items-center justify-center transition-all duration-700 transform opacity-0 translate-y-8 scale-95 min-h-[50vh] text-center">
-            <div class="relative w-28 h-28 mb-8">
-                <!-- Multi-layered mystic spinner -->
-                <div class="absolute inset-0 border-t-2 border-amber-500 rounded-full animate-spin shadow-[0_0_15px_rgba(245,158,11,0.3)]"></div>
-                <div class="absolute inset-3 border-r-2 border-slate-500 rounded-full animate-spin" style="animation-direction: reverse; animation-duration: 1.5s;"></div>
-                <div class="absolute inset-6 border-b-2 border-amber-200 rounded-full animate-spin" style="animation-duration: 2s;"></div>
-                <i class="fa-solid fa-sparkles absolute inset-0 flex items-center justify-center text-3xl text-amber-400 animate-pulse"></i>
-            </div>
-            <h3 id="loading-text" class="font-playfair text-2xl md:text-3xl font-bold text-white transition-opacity duration-300">
-                Analyzing responses...
-            </h3>
-        </article>
-
         <!-- ==================== RESULTS SCREEN ==================== -->
-        <article id="results-screen" class="max-w-4xl w-full mx-auto py-8 hidden transition-all duration-700 transform opacity-0 translate-y-8 scale-95">
+        <article id="results-screen" class="max-w-4xl w-full mx-auto py-4 sm:py-8 hidden transition-all duration-150 transform opacity-0 translate-y-4 scale-95">
             
-            <!-- Result Header -->
-            <div class="text-center mb-12 relative">
-                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-amber-500/20 rounded-full blur-[80px] pointer-events-none z-0"></div>
+            <div class="text-center mb-8 sm:mb-12 relative">
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 sm:w-64 sm:h-64 bg-amber-500/20 rounded-full blur-[80px] pointer-events-none z-0"></div>
                 
-                <h2 class="text-amber-500 font-bold tracking-widest uppercase text-xs md:text-sm mb-4 relative z-10">Your Dominant Archetype</h2>
+                <h2 class="text-amber-500 font-bold tracking-widest uppercase text-[10px] sm:text-xs md:text-sm mb-3 sm:mb-4 relative z-10">Your Dominant Archetype</h2>
                 
-                <div class="inline-flex items-center justify-center w-28 h-28 rounded-full bg-slate-900/80 backdrop-blur-md border border-amber-500/40 mb-6 shadow-[0_0_40px_rgba(245,158,11,0.25)] relative z-10">
-                    <i id="res-icon" class="fa-solid text-5xl text-amber-400 drop-shadow-[0_0_15px_rgba(245,158,11,0.5)]"></i>
+                <div class="inline-flex items-center justify-center w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-slate-900/80 backdrop-blur-md border border-amber-500/40 mb-4 sm:mb-6 shadow-[0_0_40px_rgba(245,158,11,0.25)] relative z-10">
+                    <i id="res-icon" class="fa-solid text-4xl sm:text-5xl text-amber-400 drop-shadow-[0_0_15px_rgba(245,158,11,0.5)]"></i>
                 </div>
                 
-                <h1 id="res-name" class="font-playfair text-5xl md:text-7xl font-bold text-white mb-2 relative z-10 drop-shadow-lg">Title</h1>
-                <p id="res-title" class="text-xl md:text-2xl text-amber-400/90 italic font-playfair mb-8 relative z-10">Subtitle</p>
+                <!-- Fluid typography for titles -->
+                <h1 id="res-name" class="font-playfair text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-2 relative z-10 drop-shadow-lg">Title</h1>
+                <p id="res-title" class="text-lg sm:text-xl md:text-2xl text-amber-400/90 italic font-playfair mb-6 sm:mb-8 relative z-10">Subtitle</p>
                 
-                <blockquote class="max-w-2xl mx-auto text-lg md:text-xl text-slate-300 italic border-l-4 border-amber-500 pl-6 text-left relative z-10 bg-slate-900/40 p-4 rounded-r-xl">
+                <blockquote class="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-slate-300 italic border-l-4 border-amber-500 pl-4 sm:pl-6 text-left relative z-10 bg-slate-900/40 p-4 rounded-r-xl">
                     <span id="res-quote">"Quote"</span>
                 </blockquote>
             </div>
 
-            <!-- Deep Psyche Profile Card -->
-            <div class="bg-slate-900/60 backdrop-blur-xl border border-white/10 rounded-3xl p-6 md:p-10 mb-12 shadow-2xl relative z-10">
-                <h3 class="text-2xl font-playfair font-bold text-white mb-4 flex items-center gap-3">
+            <!-- Adjusted padding for mobile container -->
+            <div class="bg-slate-900/60 backdrop-blur-xl border border-white/10 rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-10 mb-8 sm:mb-12 shadow-2xl relative z-10">
+                <h3 class="text-xl sm:text-2xl font-playfair font-bold text-white mb-4 flex items-center gap-3">
                     <i class="fa-solid fa-book-open text-amber-500 text-lg"></i> Psyche Profile
                 </h3>
-                <p id="res-desc" class="text-slate-300 leading-relaxed mb-10 text-lg">Description</p>
+                <p id="res-desc" class="text-slate-300 leading-relaxed mb-8 sm:mb-10 text-sm sm:text-base md:text-lg">Description</p>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <!-- Strengths -->
-                    <div class="bg-slate-800/60 rounded-2xl p-6 border border-emerald-500/20 hover:border-emerald-500/40 transition-colors">
-                        <div class="flex items-center gap-3 text-emerald-400 mb-3 font-bold uppercase tracking-wider text-xs">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                    <div class="bg-slate-800/60 rounded-xl sm:rounded-2xl p-5 sm:p-6 border border-emerald-500/20 hover:border-emerald-500/40 transition-colors">
+                        <div class="flex items-center gap-3 text-emerald-400 mb-2 sm:mb-3 font-bold uppercase tracking-wider text-[10px] sm:text-xs">
                             <i class="fa-solid fa-arrow-trend-up"></i> Strengths
                         </div>
-                        <p id="res-strengths" class="text-slate-300 text-sm md:text-base leading-relaxed">...</p>
+                        <p id="res-strengths" class="text-slate-300 text-[13px] sm:text-sm md:text-base leading-relaxed">...</p>
                     </div>
                     
-                    <!-- Weaknesses -->
-                    <div class="bg-slate-800/60 rounded-2xl p-6 border border-rose-500/20 hover:border-rose-500/40 transition-colors">
-                        <div class="flex items-center gap-3 text-rose-400 mb-3 font-bold uppercase tracking-wider text-xs">
+                    <div class="bg-slate-800/60 rounded-xl sm:rounded-2xl p-5 sm:p-6 border border-rose-500/20 hover:border-rose-500/40 transition-colors">
+                        <div class="flex items-center gap-3 text-rose-400 mb-2 sm:mb-3 font-bold uppercase tracking-wider text-[10px] sm:text-xs">
                             <i class="fa-solid fa-moon"></i> The Shadow
                         </div>
-                        <p id="res-weaknesses" class="text-slate-300 text-sm md:text-base leading-relaxed">...</p>
+                        <p id="res-weaknesses" class="text-slate-300 text-[13px] sm:text-sm md:text-base leading-relaxed">...</p>
                     </div>
                     
-                    <!-- Core Desire -->
-                    <div class="bg-slate-800/60 rounded-2xl p-6 border border-amber-500/20 hover:border-amber-500/40 transition-colors md:col-span-2">
-                        <div class="flex items-center gap-3 text-amber-400 mb-3 font-bold uppercase tracking-wider text-xs">
+                    <div class="bg-slate-800/60 rounded-xl sm:rounded-2xl p-5 sm:p-6 border border-amber-500/20 hover:border-amber-500/40 transition-colors md:col-span-2">
+                        <div class="flex items-center gap-3 text-amber-400 mb-2 sm:mb-3 font-bold uppercase tracking-wider text-[10px] sm:text-xs">
                             <i class="fa-solid fa-bullseye"></i> Core Desire
                         </div>
-                        <p id="res-desire" class="text-slate-300 text-sm md:text-base leading-relaxed">...</p>
+                        <p id="res-desire" class="text-slate-300 text-[13px] sm:text-sm md:text-base leading-relaxed">...</p>
                     </div>
                 </div>
             </div>
             
-            <!-- Secondary Archetypes -->
-            <div class="mb-14 relative z-10">
-                <h3 class="text-xl md:text-2xl font-playfair font-bold text-white mb-6 text-center">Your Secondary Archetypes</h3>
-                <div id="secondary-archetypes" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="mb-10 sm:mb-14 relative z-10">
+                <h3 class="text-lg sm:text-xl md:text-2xl font-playfair font-bold text-white mb-4 sm:mb-6 text-center">Your Secondary Archetypes</h3>
+                <div id="secondary-archetypes" class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
                     <!-- Injected via JS -->
                 </div>
             </div>
             
-            <!-- Actions -->
-            <div class="text-center relative z-10 flex flex-col md:flex-row items-center justify-center gap-4">
-                <button onclick="location.reload()" aria-label="Retake Assessment" class="w-full md:w-auto px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-full transition-all border border-slate-700 hover:border-slate-500 focus:outline-none focus:ring-2 focus:ring-slate-500">
+            <div class="text-center relative z-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+                <!-- Added active:scale-95 to action buttons -->
+                <button onclick="retakeQuiz()" aria-label="Retake Assessment" class="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-full active:scale-95 transition-all border border-slate-700 hover:border-slate-500 focus:outline-none focus:ring-2 focus:ring-slate-500 text-sm sm:text-base">
                     <i class="fa-solid fa-rotate-right mr-2"></i> Retake Assessment
                 </button>
-                <button onclick="copyResultsLink(this)" aria-label="Share Test Results" class="w-full md:w-auto px-8 py-4 bg-amber-500 hover:bg-amber-400 text-slate-900 font-bold rounded-full transition-all shadow-[0_0_20px_rgba(245,158,11,0.2)] focus:outline-none focus:ring-2 focus:ring-amber-300">
+                <button onclick="copyResultsLink(this)" aria-label="Share Test Results" class="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-amber-500 hover:bg-amber-400 text-slate-900 font-bold rounded-full active:scale-95 transition-all shadow-[0_0_20px_rgba(245,158,11,0.2)] focus:outline-none focus:ring-2 focus:ring-amber-300 text-sm sm:text-base">
                     <i class="fa-solid fa-share-nodes mr-2"></i> Share Test
                 </button>
             </div>
@@ -278,7 +265,6 @@
     <script>
         // --- 1. DATA STRUCTURES ---
 
-        // The 24 Statements mapped to Archetypes
         const questions = [
             { text: "I naturally take charge and assume responsibility for the success of my family or team.", archetype: "ruler" },
             { text: "I maintain faith and optimism, believing that people are inherently good.", archetype: "innocent" },
@@ -306,7 +292,6 @@
             { text: "I rely on my intuition and vision to act as a catalyst for deep change in my life.", archetype: "magician" }
         ];
 
-        // Detailed Archetype Profiles
         const archetypesData = {
             "ruler": {
                 name: "The Ruler", title: "The Sovereign Leader", icon: "fa-chess-king",
@@ -414,26 +399,26 @@
 
         // --- 3. UI CONTROLLERS ---
 
-        // Screen transition utility with animations
+        // Ultra-fast Screen transition utility
         async function switchScreen(fromId, toId) {
             const fromEl = document.getElementById(fromId);
             const toEl = document.getElementById(toId);
             
             if(fromEl) {
                 fromEl.classList.remove('opacity-100', 'translate-y-0', 'scale-100');
-                fromEl.classList.add('opacity-0', '-translate-y-8', 'scale-95');
-                await new Promise(r => setTimeout(r, 600));
+                fromEl.classList.add('opacity-0', '-translate-y-4', 'scale-95');
+                await new Promise(r => setTimeout(r, 150)); // Fast hide
                 fromEl.classList.add('visually-hidden', 'hidden');
             }
             
             if(toEl) {
                 toEl.classList.remove('visually-hidden', 'hidden');
-                toEl.classList.remove('-translate-y-8', 'scale-95');
-                toEl.classList.add('translate-y-8', 'scale-105');
+                toEl.classList.remove('-translate-y-4', 'scale-95');
+                toEl.classList.add('translate-y-4', 'scale-105');
                 
                 void toEl.offsetWidth; // Trigger reflow
                 
-                toEl.classList.remove('opacity-0', 'translate-y-8', 'scale-105');
+                toEl.classList.remove('opacity-0', 'translate-y-4', 'scale-105');
                 toEl.classList.add('opacity-100', 'translate-y-0', 'scale-100');
             }
         }
@@ -446,20 +431,16 @@
         function renderQuestion() {
             const q = questions[currentQ];
             
-            // Update Headers
             document.getElementById('current-q-number').innerText = currentQ + 1;
             const progressPercent = (currentQ / questions.length) * 100;
             document.getElementById('progress-bar').style.width = `${progressPercent}%`;
             
-            // Update Back Button
             const prevBtn = document.getElementById('prev-btn');
             prevBtn.style.opacity = currentQ === 0 ? '0' : '1';
             prevBtn.style.pointerEvents = currentQ === 0 ? 'none' : 'auto';
 
-            // Render Text
             document.getElementById('question-text').innerText = `"${q.text}"`;
             
-            // Render Options
             const optionsContainer = document.getElementById('options-container');
             optionsContainer.innerHTML = '';
             
@@ -475,15 +456,16 @@
                 const isSelected = userAnswers[currentQ] === opt.val;
                 
                 const btn = document.createElement('button');
-                btn.className = `w-full py-4 px-6 rounded-xl border font-medium transition-all duration-300 focus:outline-none flex justify-between items-center group text-left ${
+                // Added active:scale-[0.98] for nice touch feedback on mobile buttons
+                btn.className = `w-full py-3 sm:py-4 px-5 sm:px-6 rounded-xl border font-medium transition-all duration-150 active:scale-[0.98] focus:outline-none flex justify-between items-center group text-left ${
                     isSelected 
                     ? 'bg-amber-500/20 border-amber-500 text-amber-400 shadow-[0_0_15px_rgba(245,158,11,0.2)]'
                     : 'bg-slate-800/40 border-slate-700 text-slate-300 hover:bg-slate-700 hover:border-slate-500'
                 }`;
                 
                 btn.innerHTML = `
-                    <span class="text-[15px] md:text-base">${opt.label}</span>
-                    <div class="w-5 h-5 rounded-full border-2 transition-colors flex-shrink-0 ${
+                    <span class="text-[14px] sm:text-[15px] md:text-base pr-4">${opt.label}</span>
+                    <div class="w-4 h-4 sm:w-5 sm:h-5 rounded-full border-2 transition-colors flex-shrink-0 ${
                         isSelected ? 'bg-amber-500 border-amber-500' : 'border-slate-500 group-hover:border-amber-400'
                     }"></div>
                 `;
@@ -497,11 +479,11 @@
             if(isTransitioning) return;
             isTransitioning = true;
             
-            // Visual feedback
+            // Instant Visual feedback
             const allBtns = document.getElementById('options-container').children;
             for(let b of allBtns) {
-                b.className = "w-full py-4 px-6 rounded-xl border font-medium transition-all duration-300 focus:outline-none flex justify-between items-center group text-left bg-slate-800/40 border-slate-700 text-slate-300 opacity-50";
-                b.querySelector('div').className = "w-5 h-5 rounded-full border-2 transition-colors flex-shrink-0 border-slate-500";
+                b.className = "w-full py-3 sm:py-4 px-5 sm:px-6 rounded-xl border font-medium transition-all duration-150 active:scale-[0.98] focus:outline-none flex justify-between items-center group text-left bg-slate-800/40 border-slate-700 text-slate-300 opacity-50";
+                b.querySelector('div').className = "w-4 h-4 sm:w-5 sm:h-5 rounded-full border-2 transition-colors flex-shrink-0 border-slate-500";
             }
             
             btnElement.classList.remove('bg-slate-800/40', 'border-slate-700', 'text-slate-300', 'opacity-50');
@@ -511,27 +493,27 @@
             
             userAnswers[currentQ] = value;
             
-            await new Promise(r => setTimeout(r, 400)); 
+            // Reduced delay dramatically for "lightning fast" interaction
+            await new Promise(r => setTimeout(r, 100)); 
             
             if (currentQ < questions.length - 1) {
-                // Animate content change
                 const qContent = document.getElementById('question-content');
                 qContent.classList.remove('opacity-100', 'translate-x-0');
-                qContent.classList.add('opacity-0', '-translate-x-8');
+                qContent.classList.add('opacity-0', '-translate-x-4');
                 
-                await new Promise(r => setTimeout(r, 300));
+                await new Promise(r => setTimeout(r, 150)); // Snappy transition
                 
                 currentQ++;
                 renderQuestion();
                 
-                qContent.classList.remove('-translate-x-8');
-                qContent.classList.add('translate-x-8');
+                qContent.classList.remove('-translate-x-4');
+                qContent.classList.add('translate-x-4');
                 void qContent.offsetWidth; // Reflow
                 
-                qContent.classList.remove('opacity-0', 'translate-x-8');
+                qContent.classList.remove('opacity-0', 'translate-x-4');
                 qContent.classList.add('opacity-100', 'translate-x-0');
                 
-                setTimeout(() => isTransitioning = false, 300);
+                setTimeout(() => isTransitioning = false, 150);
             } else {
                 finishQuiz();
             }
@@ -543,46 +525,31 @@
                 
                 const qContent = document.getElementById('question-content');
                 qContent.classList.remove('opacity-100', 'translate-x-0');
-                qContent.classList.add('opacity-0', 'translate-x-8');
+                qContent.classList.add('opacity-0', 'translate-x-4');
                 
-                await new Promise(r => setTimeout(r, 300));
+                await new Promise(r => setTimeout(r, 150));
                 
                 currentQ--;
                 renderQuestion();
                 
-                qContent.classList.remove('translate-x-8');
-                qContent.classList.add('-translate-x-8');
+                qContent.classList.remove('translate-x-4');
+                qContent.classList.add('-translate-x-4');
                 void qContent.offsetWidth; 
                 
-                qContent.classList.remove('opacity-0', '-translate-x-8');
+                qContent.classList.remove('opacity-0', '-translate-x-4');
                 qContent.classList.add('opacity-100', 'translate-x-0');
                 
-                setTimeout(() => isTransitioning = false, 300);
+                setTimeout(() => isTransitioning = false, 150);
             }
         }
 
         async function finishQuiz() {
-            // Fill progress bar to 100%
             document.getElementById('progress-bar').style.width = '100%';
-            await new Promise(r => setTimeout(r, 400));
-            
-            await switchScreen('quiz-screen', 'loading-screen');
-            
-            // Artificial loading sequence for dramatic effect
-            const loadingTexts = ["Compiling metrics...", "Mapping your subconscious...", "Unveiling your archetype..."];
-            const loadingEl = document.getElementById('loading-text');
-            
-            for(let text of loadingTexts) {
-                loadingEl.style.opacity = 0;
-                await new Promise(r => setTimeout(r, 300));
-                loadingEl.innerText = text;
-                loadingEl.style.opacity = 1;
-                await new Promise(r => setTimeout(r, 900));
-            }
-            
+            // Skipping the artificial load screen completely for instant results.
             calculateAndRenderResults();
-            await switchScreen('loading-screen', 'results-screen');
+            await switchScreen('quiz-screen', 'results-screen');
             window.scrollTo(0, 0);
+            isTransitioning = false; // Reset lock
         }
 
         function calculateAndRenderResults() {
@@ -590,7 +557,7 @@
             Object.keys(archetypesData).forEach(k => scores[k] = 0);
             
             questions.forEach((q, i) => {
-                scores[q.archetype] += userAnswers[i] || 0; // fallback to 0 if skipped somehow
+                scores[q.archetype] += userAnswers[i] || 0; 
             });
             
             let sorted = Object.keys(scores).map(key => ({
@@ -601,8 +568,7 @@
             
             const primary = sorted[0];
             
-            // Inject Primary Result
-            document.getElementById('res-icon').className = `fa-solid ${primary.data.icon} text-5xl text-amber-400 drop-shadow-[0_0_15px_rgba(245,158,11,0.5)]`;
+            document.getElementById('res-icon').className = `fa-solid ${primary.data.icon} text-4xl sm:text-5xl text-amber-400 drop-shadow-[0_0_15px_rgba(245,158,11,0.5)]`;
             document.getElementById('res-name').innerText = primary.data.name;
             document.getElementById('res-title').innerText = primary.data.title;
             document.getElementById('res-desc').innerText = primary.data.description;
@@ -612,40 +578,46 @@
             document.getElementById('res-strengths').innerText = primary.data.strengths;
             document.getElementById('res-weaknesses').innerText = primary.data.weaknesses;
             
-            // Render Secondary Archetypes (Top 2-3)
             const secContainer = document.getElementById('secondary-archetypes');
             secContainer.innerHTML = '';
             
-            // Max possible score for one archetype is 10 (2 questions x 5 max points)
             for(let i=1; i<=3; i++) {
                 const arch = sorted[i];
                 const percentage = Math.round((arch.score / 10) * 100); 
                 
                 secContainer.innerHTML += `
-                    <div class="bg-slate-800/40 border border-slate-700 p-5 rounded-2xl flex items-center gap-4 hover:bg-slate-800/60 transition-colors">
-                        <div class="w-14 h-14 rounded-full bg-slate-900 flex items-center justify-center text-amber-500/80 border border-slate-700 shrink-0 shadow-inner">
-                            <i class="fa-solid ${arch.data.icon} text-xl"></i>
+                    <div class="bg-slate-800/40 border border-slate-700 p-4 sm:p-5 rounded-xl sm:rounded-2xl flex items-center gap-3 sm:gap-4 hover:bg-slate-800/60 transition-colors">
+                        <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-slate-900 flex items-center justify-center text-amber-500/80 border border-slate-700 shrink-0 shadow-inner">
+                            <i class="fa-solid ${arch.data.icon} text-lg sm:text-xl"></i>
                         </div>
                         <div class="flex-grow">
-                            <h4 class="font-playfair text-lg font-bold text-slate-200 mb-1">${arch.data.name}</h4>
+                            <h4 class="font-playfair text-base sm:text-lg font-bold text-slate-200 mb-1">${arch.data.name}</h4>
                             <div class="w-full bg-slate-900 rounded-full h-1.5 overflow-hidden">
                                 <div class="bg-gradient-to-r from-amber-600 to-amber-400 h-full rounded-full" style="width: ${percentage}%"></div>
                             </div>
                         </div>
-                        <div class="text-amber-500/80 font-bold text-sm w-12 text-right">${percentage}%</div>
+                        <div class="text-amber-500/80 font-bold text-xs sm:text-sm w-10 sm:w-12 text-right">${percentage}%</div>
                     </div>
                 `;
             }
         }
 
+        // Instant Retake - avoids full page reload delays
+        async function retakeQuiz() {
+            currentQ = 0;
+            userAnswers = new Array(questions.length).fill(null);
+            isTransitioning = false;
+            document.getElementById('progress-bar').style.width = '0%';
+            await switchScreen('results-screen', 'home-screen');
+            window.scrollTo(0, 0);
+        }
+
         function copyResultsLink(btn) {
-            // Mock share functionality
             const originalText = btn.innerHTML;
             btn.innerHTML = `<i class="fa-solid fa-check mr-2"></i> Link Copied!`;
             btn.classList.replace('bg-amber-500', 'bg-emerald-500');
             btn.classList.replace('hover:bg-amber-400', 'hover:bg-emerald-400');
             
-            // Dummy copy to clipboard 
             const dummy = document.createElement('input');
             document.body.appendChild(dummy);
             dummy.value = window.location.href;
